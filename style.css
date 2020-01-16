@@ -1,0 +1,418 @@
+/*
+Theme Name: Vote for me
+Text Domain: voteforme
+Version: 1.0
+Description: Theme for Joshua Breuil runing for mayor of Paris
+Author: JOSHUA BREUIL TEAM
+Author URI: https://wordpress.org/
+*/
+
+
+/* **** - Global style - **** */
+
+.presentation-image-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* -- Title types -- */
+.title-2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+/* -- Paragraph types -- */
+
+.paragraph-1 {
+    font-size: 1.7rem;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* -- Text color -- */
+
+.white-color {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* -- Padding types -- */
+
+.padding-top-bottom-4 {
+    padding: 4rem 0;
+}
+
+.padding-top-bottom-5 {
+    padding: 5rem 0;
+}
+
+/* -- Margin types -- */
+
+.margin-bottom-3 {
+    margin: 0 0 3rem;
+}
+
+
+html,
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+    content: "";
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+.hero-wrapper {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #50D890;
+}
+
+.hero-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-title-wrapper {
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    font-size: 4.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero-title-wrapper::before {
+    content: "";
+    width: 8px;
+    height: 100%;
+    background-color: #FF6A58;
+    position: absolute;
+    left: -2rem;
+}
+
+.color-hero-overlay {
+    height: 100%;
+    opacity: .5;
+    z-index: 1;
+    position: absolute;
+    background: #50D890;
+    width: 100%;
+}
+
+.commitments-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commitments-head-title {
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem;
+    font-weight: bold;
+    color: #FF6A58;
+}
+
+.comitment-category {
+    font-size: 2.9rem;
+    text-align: center;
+    margin: 0 0 2rem;
+    font-weight: 600;
+}
+
+.commitments-cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 80vw;
+}
+
+.commitments-card {
+    background: #50D890;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    flex-direction: column;
+    color: #fff;
+    margin: 1rem;
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+
+.commitment-quotes {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 2rem;
+}
+
+.commitment-desc {
+    font-size: 1.7rem;
+}
+
+
+.main-navigation {
+    height: 8vh;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-item {
+    list-style: none;
+    margin: 0 2rem;
+}
+
+.menu-item>a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.logo-header {
+    position: absolute;
+    width: 180px;
+    margin: 2rem 2vh 0
+}
+
+.biography-wrapper {
+    display: flex;
+    height: 60vh;
+    /* background-color: #7E9AFF; */
+}
+
+.biography-text {
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.biography-text h2 {
+    font-size: 7rem;
+    color: #fff;
+}
+
+.biography-text p {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.candidate-picture {
+    width: 40%;
+    height: 100%;
+}
+
+.bio-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.more-candidate-button {
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+.more-candidate-button::after {
+    content: "";
+    position: absolute;
+    height: .4rem;
+    width: 0;
+    background-color: #fff;
+    top: 2.5rem;
+    left: 0;
+    transition: width .6s ease-out;
+}
+
+.more-candidate-button:hover::after {
+    width: 100%;
+}
+
+.more-commitements-button {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background: #7E9AFF;
+    border-radius: 50px;
+    transition: padding .1s ease-out;
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+
+.more-commitements-button:hover {
+    padding: 1.7rem;
+}
+
+.more-commitements-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.membership-wrapper {
+    background: #FF6A58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.membership-title {
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 2rem;
+}
+
+.membership-wrapper p {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 55VW;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 0 3rem;
+}
+
+.more-membership-button {
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+.more-membership-button::after {
+    content: "";
+    position: absolute;
+    height: .4rem;
+    width: 0;
+    background-color: #fff;
+    top: 2.5rem;
+    left: 0;
+    transition: width .6s ease-out;
+}
+
+.more-membership-button:hover::after {
+    width: 100%;
+}
+
+
+/* ----FOOTER---- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+}
+
+.logo-footer {
+    width: 180px;
+}
+
+
+
+/* **** - Mouvement style - **** */
+
+
+.quotes-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+}
+
+.quotes {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+.quotes-author {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mouvement-text-wrapper {
+    background: #7E9AFF;
+    color: #fff;
+}
