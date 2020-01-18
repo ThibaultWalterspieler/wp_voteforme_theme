@@ -23,4 +23,20 @@
         });
     });
 
+    // live preview of cd_biography_title_first_line
+    wp.customize('cd_hero_title_first_line', function (value) {
+        value.bind(function (newval) {
+            const title = document.querySelector('.hero-line-1');
+            title.innerHTML = newval;
+        });
+    });
+
+    // live preview of cd_biography_title_2nd_line
+    wp.customize('cd_hero_title_2nd_line', function (value) {
+        value.bind(function (newval) {
+            const title = document.querySelector('.hero-line-2');
+            title.innerHTML = newval;
+        });
+    });
+
 })();
