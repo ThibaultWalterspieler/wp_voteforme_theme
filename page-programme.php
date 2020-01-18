@@ -11,172 +11,166 @@ get_header();
         </div>
     </div>
     <div class="presentation-image-wrapper">
-        <img src="<?php echo wp_get_attachment_image(88, 'full') ?>" alt="">
+        <img src="<?php echo wp_get_attachment_image(88, 'full') ?>
     </div>
 </div>
 
-<div class="agenda-wrapper">
-    <h3>Ecologie</h3>
-    <div class="desc-agenda">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
-    </div>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
+
+<div class=" agenda-wrapper">
+        <h3>Écologie</h3>
+        <div class="desc-agenda">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <?php
+                $args = array(
+                    'post_type' => 'propositions',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'domaines',
+                            'field' => 'slug',
+                            'terms' => 'ecologie'
+                        ),
+                    ),
+                );
+                $query = new WP_Query($args);
+
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<div class="swiper-slide">
+<div class="swiper-title">' . get_the_title() . '</div>
+<div class="swiper-desc">' . get_the_content() . '</div>
+</div>';
+                }
+                ?>
             </div>
         </div>
     </div>
-</div>
-<div class="agenda-wrapper">
-    <h3>Urbanisme</h3>
-    <div class="desc-agenda">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
-    </div>
+    <div class="agenda-wrapper">
+        <h3>Urbanisme</h3>
+        <div class="desc-agenda">
+            Paris souffre de la pollution, du trafic ingérable, des bruits permanents, du manque d’espace pour marcher ou simplement se poser.
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                $args = array(
+                    'post_type' => 'propositions',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'domaines',
+                            'field' => 'slug',
+                            'terms' => 'urbanisme'
+                        ),
+                    ),
+                );
+                $query = new WP_Query($args);
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<div class="swiper-slide">
+                        <div class="swiper-title">' . get_the_title() . '</div>
+                        <div class="swiper-desc">' . get_the_content() . '</div>
+                        </div>';
+                }
+                ?>
             </div>
         </div>
     </div>
-</div>
 
-<div class="agenda-wrapper">
-    <h3>Social</h3>
-    <div class="desc-agenda">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
-    </div>
+    <div class="agenda-wrapper">
+        <h3>Social</h3>
+        <div class="desc-agenda">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
+        </div>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                $args = array(
+                    'post_type' => 'propositions',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'domaines',
+                            'field' => 'slug',
+                            'terms' => 'social'
+                        ),
+                    ),
+                );
+                $query = new WP_Query($args);
+
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<div class="swiper-slide">
+                    <div class="swiper-title">' . get_the_title() . '</div>
+                    <div class="swiper-desc">' . get_the_content() . '</div>
+                    </div>';
+                }
+                ?>
+
             </div>
         </div>
     </div>
-</div>
 
-<div class="agenda-wrapper">
-    <h3>Mobilité</h3>
-    <div class="desc-agenda">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
-    </div>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-title">Une restauration saine</div>
-                <div class="swiper-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi facere, suscipit tenetur dolores ipsa nihil aliquam, necessitatibus dignissimos nostrum nemo enim error maiores unde quis optio facilis amet voluptas.</div>
+
+
+    <div class="agenda-wrapper">
+        <h3>Mobilité</h3>
+        <div class="desc-agenda">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                $args = array(
+                    'post_type' => 'propositions',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'domaines',
+                            'field' => 'slug',
+                            'terms' => 'mobilite'
+                        ),
+                    ),
+                );
+                $query = new WP_Query($args);
+
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<div class="swiper-slide">
+                    <div class="swiper-title">' . get_the_title() . '</div>
+                    <div class="swiper-desc">' . get_the_content() . '</div>
+                    </div>';
+                }
+                ?>
             </div>
         </div>
     </div>
-</div>
 
-
-<div class="membership-wrapper">
-    <div class="membership-title">
-        Nous avons besoin de vous !
+    <div class=" membership-wrapper text-center ptb-5">
+        <div class="title-2 white-color mb-3">
+            Nous avons besoin de vous !
+        </div>
+        <p class="paragraph-1 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
+        <div class="more-membership-button">
+            <a href="<?php echo get_template_directory_uri() ?>/mouvement/">
+                S'engager
+            </a>
+        </div>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
-    <div class="more-membership-button">
-        S'engager
-    </div>
-</div>
 
 
 
 
 
 
-<?php
-wp_enqueue_script('scroll_script', get_template_directory_uri() . '/scripts/scroll.js', true);
-?>
-<?php
-get_footer();
-?>
+    <?php
+    wp_enqueue_script('scroll_script', get_template_directory_uri() . '/scripts/scroll.js', true);
+    ?>
+    <?php
+    get_footer();
+    ?>
