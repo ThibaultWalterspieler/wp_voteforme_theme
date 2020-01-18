@@ -6,7 +6,10 @@ get_header();
     <div class="hero-body">
         <div class="hero-img-wrapper">
             <div class="hero-title-wrapper">
-                Joshua Breuil<br>Un Paris sur l'avenir
+                <div class="hero-line-1">
+                    <?php echo get_theme_mod('cd_hero_title_first_line', 'Joshua Breuil') ?><br>
+                </div>
+                <div class="hero-line-2"><?php echo get_theme_mod('hero_title_2nd_line', 'Un Paris sur l‘avenir') ?><br></div>
             </div>
             <div class="color-hero-overlay"></div>
             <img class="hero-img" alt="" src="<?php echo wp_get_attachment_image(64, 'full') ?>">
@@ -62,11 +65,11 @@ get_header();
 </div>
 
 
-<div class="membership-wrapper">
-    <div class="membership-title">
+<div class=" membership-wrapper text-center ptb-5">
+    <div class="title-2 white-color mb-3">
         Nous avons besoin de vous !
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
+    <p class="paragraph-1 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
     <div class="more-membership-button">
         <a href="<?php echo get_template_directory_uri() ?>/mouvement/">
             S'engager

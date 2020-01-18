@@ -3,12 +3,79 @@
 function cd_customizer_settings($wp_customize)
 {
 
-    // *** CUSTOMISE HOME ***
+    // *! CUSTOMISE HOME *!
 
-    // Add section in customise
+    // *** HERO ***
+    // Add section hero
+    $wp_customize->add_section('cd_hero', array(
+        'title'      => 'Home - Hero section',
+        'priority'   => 1,
+    ));
+
+    // Add setting for overlay background color 
+    $wp_customize->add_setting('hero_overlay_color', array(
+        'default'     => '#50D890',
+        'transport'   => 'refresh',
+    ));
+
+    // Add setting for hero title first-line
+    $wp_customize->add_setting('cd_hero_title_first_line', array(
+        'default'     => 'Joshua Breuil',
+        'transport'   => 'postMessage',
+    ));
+    $wp_customize->get_setting('cd_hero_title_first_line')->transport = 'postMessage';
+
+    // Add setting for hero title first-line
+    $wp_customize->add_setting('cd_hero_title_2nd_line', array(
+        'default'     => 'Un Paris sur l‘avenir',
+        'transport'   => 'postMessage',
+    ));
+    $wp_customize->get_setting('cd_hero_title_2nd_line')->transport = 'postMessage';
+
+    // Add setting for title-decoration
+    $wp_customize->add_setting('hero_decoration', array(
+        'default'     => '#FF6A58',
+        'transport'   => 'refresh',
+    ));
+
+    // Add Controls for overlay background color
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_overlay_color', array(
+        'label'      => __('Background color', 'mytheme'),
+        'section' => 'cd_hero',
+        'settings'   => 'hero_overlay_color',
+        'description' => 'Change the overlay background color',
+    )));
+
+    // Add Controls for hero title line one
+    $wp_customize->add_control('cd_hero_title_first_line', array(
+        'label' => 'Title - First line',
+        'description' => 'Change the text content',
+        'section'    => 'cd_hero',
+        'type'     => 'text',
+    ));
+
+    // Add Controls for hero title line one
+    $wp_customize->add_control('cd_hero_title_2nd_line', array(
+        'label' => 'Title - 2nd line',
+        'description' => 'Change the text content',
+        'section'    => 'cd_hero',
+        'type'     => 'text',
+    ));
+
+    // Add Controls for overlay background color
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_decoration', array(
+        'label'      => __('Title-decoration color', 'mytheme'),
+        'section' => 'cd_hero',
+        'settings'   => 'hero_decoration',
+        'description' => 'Change the hero-decoration color',
+    )));
+
+    // *** BIOGRAPHY ***
+
+    // Add section bio
     $wp_customize->add_section('cd_biography', array(
-        'title'      => 'Biography section',
-        'priority'   => 20,
+        'title'      => 'Home - Biography section',
+        'priority'   => 2,
     ));
 
     // Add settings for biography background color
@@ -29,8 +96,6 @@ function cd_customizer_settings($wp_customize)
         'default'     => '7rem',
         'transport'   => 'refresh',
     ));
-
-
 
     // **** CONTROLS ****
     // Add settings for biography h2 content
@@ -53,7 +118,7 @@ function cd_customizer_settings($wp_customize)
     ));
 
     // Add Controls for biography background color
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'link_color', array(
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'biography_bg_color', array(
         'label'      => __('Background color', 'mytheme'),
         'section' => 'cd_biography',
         'settings'   => 'biography_background_color',
@@ -122,6 +187,14 @@ function mytheme_customize_css()
 {
 ?>
     <style type="text/css">
+        .hero-title-wrapper::before {
+            background-color: <?php echo get_theme_mod('hero_decoration', '#50D890'); ?>;
+        }
+
+        .color-hero-overlay {
+            background-color: <?php echo get_theme_mod('hero_overlay_color', '#50D890'); ?>;
+        }
+
         .biography-text {
             background-color: <?php echo get_theme_mod('biography_background_color', '#7E9AFF'); ?>;
         }
