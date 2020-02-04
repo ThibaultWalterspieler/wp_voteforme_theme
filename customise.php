@@ -181,6 +181,31 @@ function cd_customizer_settings($wp_customize)
         'section' => 'cd_hero',
         'mime_type' => 'image',
     )));
+
+
+    // *! CUSTOMISE HOME *!
+
+    // *** HERO ***
+    // Add section hero
+    $wp_customize->add_section('cd_programme', array(
+            'title'      => 'Programme',
+            'priority'   => 3,
+    ));
+
+    // Add settings for HERO image
+    $wp_customize->add_setting('cd_programme_image', array(
+        'default' => wp_get_attachment_image(84, 'full'),
+    ));
+
+
+    // Add Controls for hero background image
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'cd_programme_image', array(
+        'label' => __('Programme image', 'theme_textdomain'),
+        'section' => 'cd_programme',
+        'mime_type' => 'image',
+    )));
+
+
 }
 add_action('customize_register', 'cd_customizer_settings');
 

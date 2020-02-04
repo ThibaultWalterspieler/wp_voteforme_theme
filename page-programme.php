@@ -11,7 +11,11 @@ get_header();
         </div>
     </div>
     <div class="presentation-image-wrapper">
-        <img src="<?php echo wp_get_attachment_image(88, 'full') ?>
+        <img src="<?php if (get_theme_mod('cd_hero_image')) :
+                                        $image_id =  get_theme_mod('cd_programme_image');
+                                        echo wp_get_attachment_image($image_id, 'full');
+                                    else : echo wp_get_attachment_image(84, 'full');
+                                    endif; ?>" ?>
     </div>
 </div>
 
