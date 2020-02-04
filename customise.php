@@ -12,6 +12,11 @@ function cd_customizer_settings($wp_customize)
         'priority'   => 1,
     ));
 
+    // Add settings for HERO image
+    $wp_customize->add_setting('cd_hero_image', array(
+        'default' => wp_get_attachment_image(84, 'full'),
+    ));
+
     // Add setting for overlay background color 
     $wp_customize->add_setting('hero_overlay_color', array(
         'default'     => '#50D890',
@@ -68,6 +73,13 @@ function cd_customizer_settings($wp_customize)
         'section' => 'cd_hero',
         'settings'   => 'hero_decoration',
         'description' => 'Change the hero-decoration color',
+    )));
+
+    // Add Controls for hero background image
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'cd_hero_image', array(
+        'label' => __('Hero image', 'theme_textdomain'),
+        'section' => 'cd_hero',
+        'mime_type' => 'image',
     )));
 
     // *** BIOGRAPHY ***

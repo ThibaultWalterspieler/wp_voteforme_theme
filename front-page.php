@@ -12,7 +12,11 @@ get_header();
                 <div class="hero-line-2"><?php echo get_theme_mod('hero_title_2nd_line', 'Un Paris sur l‘avenir') ?><br></div>
             </div>
             <div class="color-hero-overlay"></div>
-            <img class="hero-img" alt="" src="<?php echo wp_get_attachment_image(64, 'full') ?>">
+            <img class="hero-img" alt="" src="<?php if (get_theme_mod('cd_hero_image')) :
+                                        $image_id =  get_theme_mod('cd_hero_image');
+                                        echo wp_get_attachment_image($image_id, 'full');
+                                    else : echo wp_get_attachment_image(84, 'full');
+                                    endif; ?>">
         </div>
     </div>
 </div>
