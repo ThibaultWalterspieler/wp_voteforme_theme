@@ -6,7 +6,11 @@ get_header();
 </div>
 <div class="presentation-wrapper">
     <div class="presentation-image-wrapper">
-        <img src="<?php echo wp_get_attachment_image(87, 'full') ?>" alt="">
+        <img src="<?php if (get_theme_mod('cd_mouvement_image')) :
+                                        $image_id =  get_theme_mod('cd_mouvement_image');
+                                        echo wp_get_attachment_image($image_id, 'full');
+                                    else : echo wp_get_attachment_image(84, 'full');
+                                    endif; ?>" alt="">
     </div>
     <div class="presentation-text-wrapper">
         <div class="presentation-text">"Paris Avenir" est un mouvement politique et citoyen qui poursuit une ambition : remettre les parisiens au cœur de la vie politique municipale.</div>

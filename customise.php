@@ -183,27 +183,51 @@ function cd_customizer_settings($wp_customize)
     )));
 
 
-    // *! CUSTOMISE HOME *!
+    // *! CUSTOMISE LE MOUVEMENT *!
 
-    // *** HERO ***
-    // Add section hero
-    $wp_customize->add_section('cd_programme', array(
-            'title'      => 'Programme',
-            'priority'   => 3,
+    // *** MOUVEMENT ***
+    // Add section MOUVEMENT
+    $wp_customize->add_section('cd_mouvement', array(
+            'title'      => 'Mouvement',
+            'priority'   => 4,
     ));
 
-    // Add settings for HERO image
-    $wp_customize->add_setting('cd_programme_image', array(
+    // Add settings for MOUVEMENT image
+    $wp_customize->add_setting('cd_mouvement_image', array(
         'default' => wp_get_attachment_image(84, 'full'),
     ));
 
 
-    // Add Controls for hero background image
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'cd_programme_image', array(
+    // Add Controls for MOUVEMENT image
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'cd_mouvement_image', array(
         'label' => __('Programme image', 'theme_textdomain'),
-        'section' => 'cd_programme',
+        'section' => 'cd_mouvement',
         'mime_type' => 'image',
     )));
+
+
+        // *! CUSTOMISE PROGRAMME *!
+
+    // *** PROGRAMME ***
+    // Add section Programme
+    $wp_customize->add_section('cd_programme', array(
+        'title'      => 'Programme',
+        'priority'   => 3,
+));
+
+// Add settings for Programme image
+$wp_customize->add_setting('cd_programme_image', array(
+    'default' => wp_get_attachment_image(84, 'full'),
+));
+
+
+// Add Controls for programme image
+$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'cd_programme_image', array(
+    'label' => __('Programme image', 'theme_textdomain'),
+    'section' => 'cd_programme',
+    'mime_type' => 'image',
+)));
+
 
 
 }
