@@ -329,8 +329,13 @@ a:hover {
     overflow: hidden;
 }
 
+.hero-body {
+    height: 100%;
+}
+
 .hero-img-wrapper {
     position: relative;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
     background-color: #50D890;
