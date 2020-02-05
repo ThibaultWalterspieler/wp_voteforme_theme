@@ -54,7 +54,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="agenda-wrapper">
+    <div class="agenda-wrapper urban">
         <h3>Urbanisme</h3>
         <div class="desc-agenda">
             Paris souffre de la pollution, du trafic ingérable, des bruits permanents, du manque d’espace pour marcher ou simplement se poser.
@@ -86,7 +86,7 @@ get_header();
         </div>
     </div>
 
-    <div class="agenda-wrapper">
+    <div class="agenda-wrapper social">
         <h3>Social</h3>
         <div class="desc-agenda">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?
@@ -123,7 +123,7 @@ get_header();
 
 
 
-    <div class="agenda-wrapper">
+    <div class="agenda-wrapper mobility">
         <h3>Mobilité</h3>
         <div class="desc-agenda">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint reiciendis odio blanditiis vero deserunt quaerat, voluptatibus adipisci explicabo. Fugiat reiciendis cum nulla soluta impedit unde amet facilis! Tempora, sed?

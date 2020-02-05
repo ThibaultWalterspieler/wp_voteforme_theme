@@ -680,3 +680,20 @@ footer {
 .articles-preview-body {
     flex: 1 1 auto;
 }
+
+
+.urban h3 {
+    color: #FF6A58 !important;
+}
+
+.urban .swiper-slide {
+    background: #FF6A58 !important;
+}
+
+.social h3 {
+    color: #7E9AFF !important;
+}
+
+.social .swiper-slide {
+    background: #7E9AFF !important;
+}
