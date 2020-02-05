@@ -161,7 +161,7 @@ get_header();
         </div>
         <p class="paragraph-1 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
         <div class="more-membership-button">
-            <a href="<?php echo get_template_directory_uri() ?>./mouvement/">
+            <a href="./index.php/mouvement/">
                 S'engager
             </a>
         </div>
