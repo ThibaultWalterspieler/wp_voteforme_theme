@@ -33,7 +33,7 @@ get_header();
         <h2><?php echo get_theme_mod('cd_biography_title', 'Le candidat de l‘écologie humaniste') ?></h2>
         <p><?php echo get_theme_mod('cd_biography_txt', 'Le candidat de l‘écologie humaniste') ?></p>
         <div class="more-candidate-button">
-            <a href="<?php echo get_template_directory_uri() ?>/notre-candidat/">
+            <a href="<?php echo get_template_directory_uri() ?>./mouvement/">
                 En savoir plus
             </a>
         </div>
@@ -62,7 +62,7 @@ get_header();
         </div>
     </div>
     <div class="more-commitements-button">
-        <a href="<?php echo get_template_directory_uri() ?>/programme/">
+        <a href="<?php echo get_template_directory_uri() ?>./programme/">
             Découvrir le programme
         </a>
     </div>
@@ -75,7 +75,7 @@ get_header();
     </div>
     <p class="paragraph-1 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio odio doloremque aliquid. Quisquam iste illo quaerat perspiciatis nam ducimus nisi magnam voluptate, blanditiis a animi. Nesciunt rem esse blanditiis.</p>
     <div class="more-membership-button">
-        <a href="<?php echo get_template_directory_uri() ?>/mouvement/">
+        <a href="<?php echo get_template_directory_uri() ?>./mouvement/">
             S'engager
         </a>
     </div>
