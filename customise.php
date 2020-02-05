@@ -102,6 +102,30 @@ function cd_customizer_settings($wp_customize)
         'transport'   => 'refresh',
     ));
 
+
+    // AMBITION
+
+    // Add ambition section
+    $wp_customize->add_section('cd_ambition', array(
+        'title'      => 'Home - Ambition section',
+        'priority'   => 3,
+    ));
+
+      // Add settings for ambition h2 content
+      $wp_customize->add_setting('cd_ambition_title', array(
+        'default'     => 'Nos ambitions pour Paris',
+        'transport'   => 'postMessage',
+    ));
+    $wp_customize->get_setting('cd_ambition_title')->transport = 'postMessage';
+
+   // Add Controls for biography h2 content
+   $wp_customize->add_control('cd_ambition_title', array(
+    'label' => 'H2 content',
+    'description' => 'Change the section title',
+    'section'    => 'cd_ambition',
+    'type'     => 'text',
+    ));
+
     // **** CONTROLS ****
     // Add settings for biography h2 content
     $wp_customize->add_setting('cd_biography_title', array(

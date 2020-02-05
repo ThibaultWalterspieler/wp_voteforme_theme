@@ -39,4 +39,13 @@
         });
     });
 
+    // live preview of cd_ambition_title
+    wp.customize('cd_ambition_title', function (value) {
+        value.bind(function (newval) {
+            const title = document.querySelector('.commitments-head-title');
+            title.innerHTML = newval;
+        });
+    });
+
+
 })();

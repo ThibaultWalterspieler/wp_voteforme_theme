@@ -42,7 +42,7 @@ get_header();
 
 
 <div class="commitments-wrapper">
-    <div class="commitments-head-title">Nos ambitions pour Paris</div>
+    <div class="commitments-head-title"><?php echo get_theme_mod('cd_ambition_title', 'Nos ambitions pour Paris') ?></div>
     <div class="commitments-cards-wrapper">
         <div class="commitments-card">
             <div class="commitment-quotes">Rendre Paris plus vert</div>
