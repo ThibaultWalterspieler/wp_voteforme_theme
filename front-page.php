@@ -33,7 +33,7 @@ get_header();
         <h2><?php echo get_theme_mod('cd_biography_title', 'Le candidat de l‘écologie humaniste') ?></h2>
         <p><?php echo get_theme_mod('cd_biography_txt', 'Le candidat de l‘écologie humaniste') ?></p>
         <div class="more-candidate-button">
-            <a href="./index.php/notre-candidat/">
+            <a href="./index.php/programme/">
                 En savoir plus
             </a>
         </div>
