@@ -45,8 +45,16 @@ get_header();
     <div class="commitments-head-title"><?php echo get_theme_mod('cd_biography_title', 'Nos ambitions pour Paris') ?></div>
     <div class="commitments-cards-wrapper">
         <div class="commitments-card">
-            <div class="commitment-quotes">Rendre Paris plus vert</div>
-            <div class="commitment-desc">Redonner place à la nature en ville partout où cela est possible, dans nos rues, sur nos toits...</div>
+            <div class="commitment-quotes">Paris vert</div>
+            <div class="commitment-desc">
+                <p>Redonner place à la nature en ville partout où cela est possible, dans nos rues, sur nos toits...</p>
+            </div>
+        </div>
+        <div class="commitments-card">
+            <div class="commitment-quotes">Un hub social</div>
+            <div class="commitment-desc">
+                <p>Créer une trentaine de maisons des solidarités, regroupant tous les services sociaux.</p>
+            </div>
         </div>
         <div class="commitments-card">
             <div class="commitment-quotes">Rendre Paris plus vert</div>
@@ -54,11 +62,9 @@ get_header();
         </div>
         <div class="commitments-card">
             <div class="commitment-quotes">Rendre Paris plus vert</div>
-            <div class="commitment-desc">Redonner place à la nature en ville partout où cela est possible, dans nos rues, sur nos toits...</div>
-        </div>
-        <div class="commitments-card">
-            <div class="commitment-quotes">Rendre Paris plus vert</div>
-            <div class="commitment-desc">Redonner place à la nature en ville partout où cela est possible, dans nos rues, sur nos toits...</div>
+            <div class="commitment-desc">
+                <p>Créer une trentaine de maisons des solidarités, regroupant tous les services sociaux.</p>
+            </div>
         </div>
     </div>
     <div class="more-commitements-button">
