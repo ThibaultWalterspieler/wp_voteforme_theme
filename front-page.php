@@ -16,7 +16,7 @@ get_header();
                                         $image_id =  get_theme_mod('cd_hero_image');
                                         echo wp_get_attachment_image($image_id, 'full');
                                     else : echo wp_get_attachment_image(84, 'full');
-                                    endif; ?>">
+                                    endif; ?>
         </div>
     </div>
 </div>
@@ -27,7 +27,7 @@ get_header();
                                         $image_id =  get_theme_mod('cd_biography_image');
                                         echo wp_get_attachment_image($image_id, 'full');
                                     else : echo wp_get_attachment_image(84, 'full');
-                                    endif; ?>">
+                                    endif; ?>
     </div>
     <div class=" biography-text">
         <h2><?php echo get_theme_mod('cd_biography_title', 'Le candidat de l‘écologie humaniste') ?></h2>
